@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apiserver" />
+        <module name="auth" />
+        <module name="gateway" />
+        <module name="user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apiserver" target="1.8" />
+      <module name="auth" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="iserver" target="1.8" />
+      <module name="server" target="1.8" />
+      <module name="spring-cloud" target="1.8" />
+      <module name="test" target="1.8" />
+      <module name="user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

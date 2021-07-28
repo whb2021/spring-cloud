@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="apiserver:war">
+    <output-path>$PROJECT_DIR$/apiserver/target</output-path>
+    <root id="archive" name="apiserver-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="apiserver:war exploded" />
+    </root>
+  </artifact>
+</component>

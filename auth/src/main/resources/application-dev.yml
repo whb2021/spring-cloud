@@ -1,0 +1,60 @@
+
+spring:
+  application:
+    name: auth
+  redis:
+      database: 0
+      host: 192.168.0.173
+      port: 6379
+      password: wlgs@2020.
+      jedis:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+    # 数据源配置
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.0.166:3306/wlgs?characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
+    #mysql8版本以上驱动包指定新的驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #   数据源其他配置, 在 DruidConfig配置类中手动绑定
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 8
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+  jackson:
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+
+server:
+  port: 7002
+  servlet:
+    context-path: /auth
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    prefer-same-zone-eureka: true
+    service-url:
+      defaultZone:  http://admin:admin@localhost:7000/apiserver/eureka/
+
+mybatis-plus:
+  # 指定实体类所有包
+  type-aliases-package: com.wlgs.auth.web.entity
+
+# 日志级别，会打印sql语句
+logging:
+  level:
+    com.boke.auth.web.mapper: debug
