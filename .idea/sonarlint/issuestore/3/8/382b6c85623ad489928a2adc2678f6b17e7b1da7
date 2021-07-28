@@ -1,0 +1,6 @@
+
+qsquid:UselessImportCheck	"ARemove this unused import 'javax.naming.AuthenticationException'.(†Ø¯øÿÿÿÿ8¥ÕØ®/
+~squid:S3923%"[Remove this conditional structure or edit its code blocks so that they're not all the same.(˜–€Òşÿÿÿÿ8¥ÕØ®/
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¥ÕØ®/
+Usquid:S1854"7Remove this useless assignment to local variable "map".(ƒ¢Œó8¥ÕØ®/
+Fsquid:S1481"(Remove this unused "map" local variable.(ƒ¢Œó8¥ÕØ®/
