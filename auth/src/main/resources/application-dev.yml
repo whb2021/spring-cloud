@@ -4,9 +4,9 @@ spring:
     name: auth
   redis:
       database: 0
-      host: 192.168.0.173
+      host: 192.168.0.181
       port: 6379
-      password: wlgs@2020.
+      password: wlgs
       jedis:
         pool:
           max-active: 8

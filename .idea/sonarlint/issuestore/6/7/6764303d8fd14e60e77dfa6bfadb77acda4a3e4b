@@ -1,0 +1,16 @@
+
+Ssquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ØÔÍ
+_squid:S1192"JUse already-defined constant 'AUTH' instead of duplicating its value here.(Ö˜™ß
+qsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "auth".(Ñ¬‰ä
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(”¹×ğ
+Ssquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ØÔÍ
+xsquid:S1488"cImmediately return this expression instead of assigning it to the temporary variable "accessToken".(´Ó¶À
+ysquid:S1488"dImmediately return this expression instead of assigning it to the temporary variable "refreshToken".(õƒì
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(”¹×ğ
+Jsquid:S1905"5Remove this unnecessary cast to "OAuth2RefreshToken".(à­¦Ù
+^squid:S2583"DChange this condition so that it does not always evaluate to "false"(®×ğçÿÿÿÿÿ
+1squid:S2153"Remove the boxing to "Long".(Ş§ş
+Isquid:S1905"4Remove this unnecessary cast to "OAuth2AccessToken".(¹Ÿßõ
+Qsquid:S1905"7Remove this unnecessary cast to "OAuth2Authentication".(Ù³òåşÿÿÿÿ
+1squid:S2153"Remove the boxing to "Long".(Ş§ş
+vsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "auth".(¢Ë†µûÿÿÿÿ

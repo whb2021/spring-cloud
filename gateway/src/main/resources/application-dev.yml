@@ -42,6 +42,11 @@ zuul:
       serviceId: user
       sensitiveHeaders: "*"
       strip-prefix: false
+    guard:
+      path: /guard/**
+      serviceId: guard
+      sensitiveHeaders: "*"
+      strip-prefix: false
   retryable: false
   ignored-services: "*"
   ribbon:

@@ -1,21 +1,25 @@
 package com.wlgs.auth.service;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.wlgs.auth.web.client.feign.UserServiceFeign;
 import com.wlgs.auth.web.entity.UserDetail;
 import com.wlgs.auth.web.service.UserService;
+import com.wlgs.common.web.dto.UserExcecution;
+import com.wlgs.common.web.entity.User;
 import org.assertj.core.util.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import javax.annotation.Resource;
 import java.util.List;
 
 @Component("customUserDetailsService")
@@ -26,18 +30,23 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+   /* @Autowired
+    private UserServiceFeign userServiceFeign;*/
+
     @Autowired
-    private UserService userService;
+    private UserServiceFeign userServiceFeign;
 
     @Override
-    public UserDetails loadUserByUsername(String phone) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
         //查询业主信息
         try {
-            com.wlgs.auth.web.entity.User user = this.userService.getUser(phone);
+            UserExcecution ue = this.userServiceFeign.getUser(name);
+            User user = JSON.parseObject(ue.getData().toString(), User.class);
+            logger.info("user {} " + user.toString());
             UserDetail u = new UserDetail();
             if (user != null && user.getPhone() != null) {
-                u.setUsername(user.getPhone());
-                u.setPassword(passwordEncoder.encode("1234"));
+                u.setUsername(user.getUserName());
+                u.setPassword(user.getPassword());
                 findCustomerPermission(u);
             }
             return u;

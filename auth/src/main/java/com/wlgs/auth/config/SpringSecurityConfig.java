@@ -1,5 +1,6 @@
 package com.wlgs.auth.config;
 
+import com.wlgs.common.web.putils.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -28,7 +29,18 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 //        auth.inMemoryAuthentication()
 //                .withUser("admin").password(passwordEncoder.encode("1234"))
 //                .authorities("product");
-        auth.userDetailsService(customUserDetailsService);
+        auth.userDetailsService(customUserDetailsService).passwordEncoder(new PasswordEncoder() {
+            @Override
+            public String encode(CharSequence charSequence) {
+                return MD5Utils.encode((String) charSequence);
+            }
+
+            @Override
+            public boolean matches(CharSequence charSequence, String s) {
+                return s.equals(MD5Utils.encode((String) charSequence));
+            }
+        });
+        ;
     }
 
     @Bean // password 模式需要此bean

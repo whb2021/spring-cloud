@@ -13,6 +13,8 @@
         <module>apiserver</module>
         <module>auth</module>
         <module>user</module>
+        <module>guard</module>
+        <module>common</module>
     </modules>
 
     <parent>
@@ -37,7 +39,7 @@
         <httpclient.version>4.5.12</httpclient.version>
         <httpcore.version>4.4.13</httpcore.version>
         <!-- 定义版本号, 子模块直接引用-->
-        <spring-cloud.version>1.0-SNAPSHOT</spring-cloud.version>
+        <!-- <spring-cloud.version>1.0-SNAPSHOT</spring-cloud.version>-->
     </properties>
 
     <dependencies>

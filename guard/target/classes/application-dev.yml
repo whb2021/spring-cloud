@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: guard
+  redis:
+        database: 0
+        host: 192.168.0.174
+        port: 6379
+        password: wlgs@2020.
+        jedis:
+          pool:
+            max-active: 8
+            max-idle: 8
+            min-idle: 0
+    # 数据源配置
+  datasource:
+    username: root
+    password: smarthomeauth2013
+    #url: jdbc:mysql://192.168.0.166:3306/iot_up?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://192.168.0.166:3306/wlgs?characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
+    #mysql8版本以上驱动包指定新的驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #   数据源其他配置, 在 DruidConfig配置类中手动绑定
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 8
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+  jackson:
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 7004
+  servlet:
+    context-path: /guard
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    prefer-same-zone-eureka: true
+    service-url:
+      defaultZone: http://admin:admin@localhost:7000/apiserver/eureka/
+
+security:
+  oauth2:
+    resource:
+      id: auth
+      user-info-uri: http://localhost:7001/gateway/auth/api/authority
+      prefer-token-info: false
+
+logging:
+  level:
+    com.wlgs.user.web.mapper: debug
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+

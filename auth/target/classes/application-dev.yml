@@ -4,7 +4,7 @@ spring:
     name: auth
   redis:
       database: 0
-      host: 192.168.0.173
+      host: 192.168.0.181
       port: 6379
       password: sola@2020.
       jedis:

@@ -7,6 +7,9 @@
           <element id="module-output" name="auth" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="common-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="common" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.2.2.RELEASE" />
@@ -35,8 +38,6 @@
           <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-starter:2.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-context:2.2.5.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:5.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-commons:2.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-rsa:1.0.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.64" />
           <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.64" />
@@ -158,6 +159,16 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.12.1" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.12.1" />
           <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.29" />
+          <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-starter-openfeign:2.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-openfeign-core:2.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: io.github.openfeign.form:feign-form-spring:3.8.0" />
+          <element id="library" level="project" name="Maven: io.github.openfeign.form:feign-form:3.8.0" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
+          <element id="library" level="project" name="Maven: org.springframework.cloud:spring-cloud-commons:2.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:5.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: io.github.openfeign:feign-core:10.10.1" />
+          <element id="library" level="project" name="Maven: io.github.openfeign:feign-slf4j:10.10.1" />
+          <element id="library" level="project" name="Maven: io.github.openfeign:feign-hystrix:10.10.1" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.12" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.75" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />

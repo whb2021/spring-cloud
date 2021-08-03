@@ -6,11 +6,11 @@
 
     <select id="getUser" resultType="com.wlgs.auth.web.entity.UserDetail">
         SELECT
-            id,phone
+            u.user_id,u.user_name,u.password
         FROM
-            pm_customer
+            t_user u
         WHERE
-            phone = #{phone}
+            u.user_name = #{name}
     </select>
 
 
