@@ -1,10 +1,10 @@
 
-}squid:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(¼Ê¤òüÿÿÿÿ8Ë¯ý¯°/
-Xsquid:S2589"7Remove this expression which always evaluates to "true"(ä«˜Þÿÿÿÿÿ8Ë¯ý¯°/
-_squid:UselessImportCheck"6Remove this unused import 'javax.annotation.Resource'.(î¾Ì—8Ë¯ý¯°/
-esquid:UselessImportCheck"<Remove this unused import 'com.alibaba.fastjson.JSONObject'.(äýµ8Ë¯ý¯°/
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ë¯ý¯°/
-É%squid:RedundantThrowsDeclarationCheck"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(áƒ–†8Ë¯ý¯°/
-bsquid:S3457"AFormat specifiers should be used instead of string concatenation.(¼Ê¤òüÿÿÿÿ8Ë¯ý¯°/
-bsquid:S3457"AFormat specifiers should be used instead of string concatenation.(ÂæÒàÿÿÿÿÿ8Ë¯ý¯°/
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´îÖäùÿÿÿÿ8Ë¯ý¯°/
+}squid:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(¼Ê¤òüÿÿÿÿ8ÊÇ‰Ï°/
+Xsquid:S2589"7Remove this expression which always evaluates to "true"(ä«˜Þÿÿÿÿÿ8ÊÇ‰Ï°/
+_squid:UselessImportCheck"6Remove this unused import 'javax.annotation.Resource'.(î¾Ì—8ÊÇ‰Ï°/
+esquid:UselessImportCheck"<Remove this unused import 'com.alibaba.fastjson.JSONObject'.(äýµ8ÊÇ‰Ï°/
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÊÇ‰Ï°/
+Î%squid:RedundantThrowsDeclarationCheck"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(âÐÒŽøÿÿÿÿ8ÊÇ‰Ï°/
+bsquid:S3457"AFormat specifiers should be used instead of string concatenation.(¼Ê¤òüÿÿÿÿ8ÊÇ‰Ï°/
+bsquid:S3457"AFormat specifiers should be used instead of string concatenation.(ÂæÒàÿÿÿÿÿ8ÊÇ‰Ï°/
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´îÖäùÿÿÿÿ8ÊÇ‰Ï°/

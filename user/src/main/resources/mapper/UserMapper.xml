@@ -5,7 +5,7 @@
 <mapper namespace="com.wlgs.user.web.mapper.UserMapper">
 
     <select id="getUserByName" resultType="com.wlgs.common.web.entity.User">
-          SELECT user_id,username,password,phone FROM t_user WHERE username = #{name}
+          SELECT user_id,username,password,mobile FROM sys_user WHERE username = #{name}
     </select>
 
 

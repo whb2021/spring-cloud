@@ -3,9 +3,9 @@ spring:
     name: user
   redis:
         database: 0
-        host: 192.168.0.174
+        host: 127.0.0.1
         port: 6379
-        password: wlgs
+        password: 123456
         jedis:
           pool:
             max-active: 8
@@ -15,7 +15,6 @@ spring:
   datasource:
     username: root
     password: root
-    #url: jdbc:mysql://192.168.0.166:3306/iot_up?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     url: jdbc:mysql://192.168.0.166:3306/wlgs?characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
     #mysql8版本以上驱动包指定新的驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver

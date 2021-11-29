@@ -1,3 +1,4 @@
 
-Ysquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÇŸ«°/
-Ksquid:S1068"*Remove this unused "logger" private field.(çŸœËüÿÿÿÿ8´åÖ¬°/
+~squid:UselessImportCheck"PRemove this unused import 'org.springframework.web.bind.annotation.PostMapping'.(äƒà°ùÿÿÿÿ8áïÿ×°/
+]squid:UselessImportCheck"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8áïÿ×°/
+Ksquid:S1068"*Remove this unused "logger" private field.(çŸœËüÿÿÿÿ8áïÿ×°/

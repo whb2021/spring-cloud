@@ -32,8 +32,8 @@ public class AuthController {
 
     @GetMapping(value = {"/getUser"}, produces = {"application/json;charset=utf-8"})
     @ResponseBody
-    public UserExcecution getUser(@RequestParam("phone") String phone) {
-        User user = this.userService.getUserByName(phone);
+    public UserExcecution getUser(@RequestParam("name") String name) {
+        User user = this.userService.getUserByName(name);
         if (user != null) {
             String str = JSON.toJSONString(user);
             return new UserExcecution(UserStateEnum.SUCCESS, str);

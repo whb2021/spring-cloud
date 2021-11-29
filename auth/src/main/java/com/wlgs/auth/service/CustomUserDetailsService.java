@@ -30,9 +30,6 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-   /* @Autowired
-    private UserServiceFeign userServiceFeign;*/
-
     @Autowired
     private UserServiceFeign userServiceFeign;
 
@@ -44,7 +41,7 @@ public class CustomUserDetailsService implements UserDetailsService {
             User user = JSON.parseObject(ue.getData().toString(), User.class);
             logger.info("user {} " + user.toString());
             UserDetail u = new UserDetail();
-            if (user != null && user.getPhone() != null) {
+            if (user != null) {
                 u.setUsername(user.getUserName());
                 u.setPassword(user.getPassword());
                 findCustomerPermission(u);
